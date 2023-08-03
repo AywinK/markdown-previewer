@@ -1,0 +1,49 @@
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu+Mono&display=swap');
+
+/* styles */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.title {
+    text-align: center;
+    font-family: "Lato";
+}
+
+.wrapper {
+    display: flex;
+    margin: 5px auto;
+    min-height: calc(90vh - 5px);
+    gap: 5px;
+    padding: 5px;
+    justify-content: space-between;
+
+    >* {
+        width: 50%;
+        flex-grow: 1;
+        margin-bottom: 300px;
+        border-radius: 20px;
+        padding: 20px;
+        overflow: hidden;
+        border: 0.5rem solid rgb(187, 151, 192);
+    }
+}
+
+#editor {
+    background-color: darkslategray;
+    color: lightgray;
+    font-family: 'Ubuntu Mono', monospace;
+}

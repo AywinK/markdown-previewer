@@ -43,15 +43,23 @@ function App() {
 
 
   return (
-    <main>
-      <label htmlFor="editor" style={{ display: "block" }}>Editor</label>
-      <textarea id="editor" style={{
-        width: "90vw"
-      }} onChange={handleChange} value={markdownData} />
-      <section id="preview" dangerouslySetInnerHTML={{ __html: marked.parse(markdownData) }} >
+    <>
+      <header>
+        <h1 className="title">Markdown Previewer</h1>
+      </header>
+      <main className="wrapper">
+        <label htmlFor="editor" style={{ display: "none" }}>Editor</label>
+        <textarea
+          spellCheck={false}
+          id="editor"
+          placeholder="Enter markdown here!"
+          onChange={handleChange}
+          value={markdownData} />
+        <section id="preview" dangerouslySetInnerHTML={{ __html: marked.parse(markdownData) }} >
 
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }
 
