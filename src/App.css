@@ -7,7 +7,7 @@
 }
 
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Lato&family=Ubuntu+Mono&display=swap');
 
 /* styles */
 
@@ -46,4 +46,26 @@ body {
     background-color: darkslategray;
     color: lightgray;
     font-family: 'Ubuntu Mono', monospace;
+}
+
+#preview {
+    font-family: 'Crimson Pro', serif;
+}
+
+/* media queries */
+
+@media (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        >* {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 80vh;
+            max-width: 100vw;
+            overflow-x: scroll;
+        }
+    }
 }
